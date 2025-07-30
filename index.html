@@ -1,89 +1,99 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <title>IT-Service Desk</title>
+  <meta charset="UTF-8">
+  <title>IT-SelfService</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f3f4f6;
+      margin: 0;
+      padding: 50px 0;
+      background-color: #F8F9FA;
+      font-family: 'Segoe UI', 'Arial', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
+      gap: 40px;
     }
 
     h1 {
-      font-size: 2.5em;
-      color: #003366;
-      margin-bottom: 40px;
+      font-size: 48px;
+      color: #004f9f;
+      margin-bottom: 10px;
     }
 
-    /* bestehende Buttons */
-    .button {
-      padding: 20px 40px;
-      margin: 15px 0;
-      font-size: 1.2em;
-      color: #fff;
-      background-color: #0078d4;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      width: 250px;
-      text-align: center;
-      transition: background-color 0.3s ease;
+    .button-wrapper {
+      width: 512px;
     }
 
-    .button:hover {
-      background-color: #005fa3;
-    }
-
-    /* neuer dritter Button - custom style */
-    .custom-button {
-      background-color: #0078d4;
-      color: #ffffff;
-      padding: 22px 44px;
-      font-size: 1.25em;
-      font-weight: bold;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
-      cursor: pointer;
-      display: inline-flex;
+    .service-btn {
+      width: 100%;
+      height: 147px;
+      display: flex;
       align-items: center;
-      gap: 14px;
+      border: 2px solid #5DAAF7;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease-in-out;
+      text-decoration: none;
+    }
+
+    .service-btn:hover {
+      transform: scale(1.02);
+    }
+
+    .btn-left {
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(135deg, #2D8CF0 50%, #5DAAF7 50%);
+      clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%);
+    }
+
+    .btn-right {
+      width: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      transition: background-color 0.2s ease;
-      margin-top: 15px; /* Abstand nach oben */
-      width: 270px; /* etwas breiter */
-    }
-
-    .custom-button:hover {
-      background-color: #005fa3;
-    }
-
-    .custom-button img {
-      width: 26px;
-      height: 26px;
+      padding: 0 10px;
+      color: #4A4A4A;
+      font-size: 28px;
     }
   </style>
 </head>
 <body>
-  <h1>IT-Service Desk</h1>
-  
-  <button class="button" onclick="window.location.href='tel:+4999999999'">
-    IT-Service Desk anrufen
-  </button>
-  
-  <button class="button" onclick="window.location.href='mailto:it-support@firma.de'">
-    IT-Service Desk per E-Mail kontaktieren
-  </button>
 
-  <button class="custom-button" onclick="window.location.href='https://mos-sys-01.mpdv.local/bWebServer/Kiosk/login'">
-    <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Telefon">
-    Kiosk Login öffnen
-  </button>
+  <h1>IT-SelfService</h1>
+
+  <div class="button-wrapper">
+    <a href="tel:+491234567890" class="service-btn">
+      <div class="btn-left"></div>
+      <div class="btn-right">IT Service Desk<br>anrufen</div>
+    </a>
+  </div>
+
+  <div class="button-wrapper">
+    <a href="https://it-servicedesk.mpdv.local/otwg20/#/main/mainPage/2b2ecad9-6d93-4dbd-8e29-a2a396edc9a4" target="_blank" class="service-btn">
+      <div class="btn-left"></div>
+      <div class="btn-right">Ticket Self Service</div>
+    </a>
+  </div>
+
+  <div class="button-wrapper">
+    <a href="mailto:Support@test.com" class="service-btn">
+      <div class="btn-left"></div>
+      <div class="btn-right">IT Service Desk<br>E-Mail senden</div>
+    </a>
+  </div>
+
+  <div class="button-wrapper">
+    <a href="https://mos-sys-01.mpdv.local/bWebServer/Kiosk/login" target="_blank" class="service-btn">
+      <div class="btn-left"></div>
+      <div class="btn-right">Software Kiosk</div>
+    </a>
+  </div>
+
 </body>
 </html>
