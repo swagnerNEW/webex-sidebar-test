@@ -21,6 +21,7 @@
       margin-bottom: 40px;
     }
 
+    /* bestehende Buttons */
     .button {
       padding: 20px 40px;
       margin: 15px 0;
@@ -38,15 +39,51 @@
     .button:hover {
       background-color: #005fa3;
     }
+
+    /* neuer dritter Button - custom style */
+    .custom-button {
+      background-color: #0078d4;
+      color: #ffffff;
+      padding: 22px 44px;
+      font-size: 1.25em;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      text-align: center;
+      transition: background-color 0.2s ease;
+      margin-top: 15px; /* Abstand nach oben */
+      width: 270px; /* etwas breiter */
+    }
+
+    .custom-button:hover {
+      background-color: #005fa3;
+    }
+
+    .custom-button img {
+      width: 26px;
+      height: 26px;
+    }
   </style>
 </head>
 <body>
   <h1>IT-Service Desk</h1>
+  
   <button class="button" onclick="window.location.href='tel:+4999999999'">
     IT-Service Desk anrufen
   </button>
+  
   <button class="button" onclick="window.location.href='mailto:it-support@firma.de'">
     IT-Service Desk per E-Mail kontaktieren
+  </button>
+
+  <button class="custom-button" onclick="window.location.href='https://mos-sys-01.mpdv.local/bWebServer/Kiosk/login'">
+    <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Telefon">
+    Kiosk Login öffnen
   </button>
 </body>
 </html>
