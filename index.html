@@ -10,21 +10,25 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+      justify-content: flex-start;
+      min-height: 100vh;
       margin: 0;
     }
 
-    h1 {
-      font-size: 2.5em;
-      color: white;
-      margin-bottom: 40px;
-      padding: 40px 60px;
-      background-image: url('https://raw.githubusercontent.com/swagnerNEW/webex-sidebar-test/main/IT-SelfService2.jpg');
+    .header {
+      width: 100%;
+      padding: 60px 0;
+      background-image: url(https://mpdvnet.mpdv.local/de/Abteilungen/it/PublishingImages/Seiten/it-selfservice/IT-SelfService2.jpg);
       background-size: cover;
       background-position: center;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 2.5em;
+      color: white;
+      margin: 0;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
     }
 
     .button {
@@ -44,15 +48,54 @@
     .button:hover {
       background-color: #005fa3;
     }
+
+    .custom-button {
+      background-color: #0078d4;
+      color: white;
+      padding: 20px 40px;
+      margin: 15px 0;
+      font-size: 1.2em;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 250px;
+      transition: background-color 0.3s ease;
+    }
+
+    .custom-button:hover {
+      background-color: #005fa3;
+    }
+
+    .custom-button img {
+      width: 24px;
+      height: 24px;
+    }
   </style>
 </head>
 <body>
-  <h1>IT-Service Desk</h1>
+
+  <div class="header">
+    <h1>IT-Service Desk</h1>
+  </div>
+
   <button class="button" onclick="window.location.href='tel:+4999999999'">
     IT-Service Desk anrufen
   </button>
   <button class="button" onclick="window.location.href='mailto:it-support@firma.de'">
     IT-Service Desk per E-Mail kontaktieren
   </button>
+  
+  <!-- Neuer optisch angepasster Button (noch ohne Funktion) -->
+  <button class="custom-button">
+    <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Icon">
+    Neuer Button
+  </button>
+
 </body>
 </html>
