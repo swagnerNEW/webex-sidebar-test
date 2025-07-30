@@ -3,31 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>IT-SelfService</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
-      padding: 50px 0;
+      padding: 5vh 0;
       background-color: #F8F9FA;
       font-family: 'Segoe UI', 'Arial', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 40px;
+      gap: 6vh;
     }
 
     h1 {
-      font-size: 48px;
+      font-size: 5vw;
       color: #004f9f;
-      margin-bottom: 10px;
+      margin-bottom: 1vh;
+      text-align: center;
     }
 
     .button-wrapper {
-      width: 512px;
+      width: 90%;
+      max-width: 512px;
     }
 
     .service-btn {
       width: 100%;
-      height: 147px;
+      aspect-ratio: 3.5 / 1;
       display: flex;
       align-items: center;
       border: 2px solid #5DAAF7;
@@ -59,7 +62,7 @@
       text-align: center;
       padding: 0 10px;
       color: #4A4A4A;
-      font-size: 28px;
+      font-size: clamp(20px, 2.8vw, 28px);
     }
   </style>
 </head>
@@ -68,21 +71,21 @@
   <h1>IT-SelfService</h1>
 
   <div class="button-wrapper">
-    <a href="tel:+491234567890" class="service-btn">
+    <a href="tel:+49162619209110" class="service-btn">
       <div class="btn-left"></div>
       <div class="btn-right">IT Service Desk<br>anrufen</div>
     </a>
   </div>
 
   <div class="button-wrapper">
-    <a href="https://https://it-servicedesk.mpdv.local/otwg20/#/login?guestlogin=1" target="_blank" class="service-btn">
+    <a href="https://it-servicedesk.mpdv.local/otwg20/#/login?guestlogin=1" target="_blank" class="service-btn">
       <div class="btn-left"></div>
       <div class="btn-right">Ticket Self Service</div>
     </a>
   </div>
 
   <div class="button-wrapper">
-    <a href="mailto:Support@test.com" class="service-btn">
+    <a href="mailto:it-servicedesk@mpdv.com" class="service-btn">
       <div class="btn-left"></div>
       <div class="btn-right">IT Service Desk<br>E-Mail senden</div>
     </a>
