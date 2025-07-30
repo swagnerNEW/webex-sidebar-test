@@ -10,25 +10,21 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
+      justify-content: center;
+      height: 100vh;
       margin: 0;
     }
 
-    .header {
-      width: 100%;
-      padding: 60px 0;
-      background-image: url(https://mpdvnet.mpdv.local/de/Abteilungen/it/PublishingImages/Seiten/it-selfservice/IT-SelfService2.jpg); /* Hier dein Bild */
-      background-size: cover;
-      background-position: center;
-      text-align: center;
-    }
-
-    .header h1 {
+    h1 {
       font-size: 2.5em;
       color: white;
-      margin: 0;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+      margin-bottom: 40px;
+      padding: 40px 60px;
+      background-image: url('https://raw.githubusercontent.com/swagnerNEW/webex-sidebar-test/main/IT-SelfService2.jpg');
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
     .button {
@@ -51,17 +47,12 @@
   </style>
 </head>
 <body>
-
-  <div class="header">
-    <h1>IT-Service Desk</h1>
-  </div>
-
+  <h1>IT-Service Desk</h1>
   <button class="button" onclick="window.location.href='tel:+4999999999'">
     IT-Service Desk anrufen
   </button>
   <button class="button" onclick="window.location.href='mailto:it-support@firma.de'">
     IT-Service Desk per E-Mail kontaktieren
   </button>
-
 </body>
 </html>
